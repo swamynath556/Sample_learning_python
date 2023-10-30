@@ -8,7 +8,7 @@ from pages.HomePage import HomePage
 
 @given("User opens the main page")
 def step_impl(context):
-    HomePage(context).navigate_to_amazon_page(context.config.userdata['env'])
+    HomePage(context).navigate_to_amazon_page("https://www.amazon.in/")
 
 
 @when('User searches with value : {value}')
