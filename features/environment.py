@@ -8,7 +8,7 @@ from pages.base import basepage
 def before_feature(context, feature):
     for scenario in feature.scenarios:
         if "smoke_test" not in scenario.effective_tags:
-            patch_scenario_with_autoretry(scenario, max_attempts=int(context.config.userdata['re_run']))
+            patch_scenario_with_autoretry(scenario, max_attempts=2)
 
 
 def before_scenario(context, scenario):
